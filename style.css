@@ -21,9 +21,7 @@ body.dark-theme {
    --text-color: #bdc2bf;
    --body-color: #1c211f;
    --container-color: #262c29;
-   --primary-color-alt: #253f33;;
-   /* --primary-color-light: #93bdaa; */
-   /* --primary-color-lighten: #253f33; */
+   --primary-color-alt: #253f33;
 }
 
 /********** BASE **********/
@@ -136,6 +134,7 @@ p {
    color: var(--title-color);
    letter-spacing: -1px;
    transition: 300ms;
+   max-width: fit-content;
 }
 
 .nav-logo:hover {
@@ -396,7 +395,7 @@ p {
    background-color: var(--primary-color-alt);
    position: absolute;
    top: 15%;
-   left: 10%;
+   left: 15%;
    z-index: -1;
 }
 
@@ -414,13 +413,14 @@ p {
 .product-card h3 {
    font-size: 0.9em;
    margin-bottom: 0.5rem;
+   margin-left: 16px;
 }
 
 .product-card .product-card-footer {
    display: flex;
    justify-content: space-between;
    align-items: flex-end;
-   width: 80%;
+   margin: 0 16px;
 }
 
 .product-card .btn {

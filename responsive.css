@@ -133,10 +133,6 @@
       margin-bottom: 4rem;
    }
 
-   .product-cards-container {
-      column-gap: 1rem;
-   }
-
    .product-card {
       grid-column: span 4;
       position: relative;
@@ -324,6 +320,10 @@
 
    .product-card {
       grid-column: span 2;
+   }
+
+   .product-card img {
+      max-width: 70%;
    }
 
    .product-card:nth-child(odd) {
