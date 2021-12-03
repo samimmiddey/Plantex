@@ -691,3 +691,12 @@ p {
    z-index: 100;
 }
 
+/* Pre Loader */
+.preloader {
+   background: var(--body-color) url(assets/YCZH.gif) no-repeat center;
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   z-index: 200;
+}
+

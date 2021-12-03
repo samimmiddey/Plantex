@@ -15,7 +15,7 @@ closeBtn.addEventListener('click', () => {
 
 // Show Header Box Shadow
 window.addEventListener('scroll', () => {
-   if(scrollY >= 80) {
+   if (scrollY >= 80) {
       header.classList.add('scroll-header');
    } else {
       header.classList.remove('scroll-header');
@@ -38,7 +38,7 @@ const questionCards = document.querySelectorAll('.question-card');
 
 questionCards.forEach(card => {
    card.addEventListener('click', (e) => {
-      if(e.target.classList.contains('fa-plus')) {
+      if (e.target.classList.contains('fa-plus')) {
          card.classList.toggle('active');
          e.target.classList.toggle('fa-times');
       }
@@ -82,11 +82,11 @@ darkModeBtn.addEventListener('click', (e) => {
 
 // Setting Theme to Local Storage
 function storingTheme(themeIcon) {
-   if(themeIcon === 'fa-sun') {
+   if (themeIcon === 'fa-sun') {
       document.body.classList.add('dark-theme');
       darkModeBtn.classList.remove(lightIcon);
       darkModeBtn.classList.add(darkIcon);
-   } else if(themeIcon === 'fa-moon') {
+   } else if (themeIcon === 'fa-moon') {
       document.body.classList.remove('dark-theme');
       darkModeBtn.classList.remove(darkIcon);
       darkModeBtn.classList.add(lightIcon);
@@ -105,7 +105,13 @@ const sr = ScrollReveal({
 
 // Reveal Elements
 sr.reveal('.home-text');
-sr.reveal('.home-img', {delay: 300});
-sr.reveal('.social', {delay: 400});
-// sr.reveal('.contact-form', {origin: 'right'});
-sr.reveal('.about-card, .step-card, .product-card, .question-card, .contact-card, .address-logo, .address-grid-element', {interval: 100});
+sr.reveal('.home-img', { delay: 300 });
+sr.reveal('.social', { delay: 400 });
+sr.reveal('.about-card, .step-card, .product-card, .question-card, .contact-card, .address-logo, .address-grid-element', { interval: 100 });
+
+// Hide Pre Loader
+const preLoader = document.querySelector('.preloader');
+
+window.addEventListener('load', () => {
+   preLoader.style.display = "none";
+});
